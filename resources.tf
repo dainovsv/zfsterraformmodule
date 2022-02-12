@@ -8,6 +8,7 @@ resource "aws_db_instance" "ZFS_DB" {
   #password             = var.database_password
   db_subnet_group_name = aws_db_subnet_group.SUBNET_GROUP_FOR_RDS.name
   vpc_security_group_ids = [aws_security_group.LAUCH_WIZARD_ZFS_DB.id]
+  skip_final_snapshot  = true
 }
 
 
